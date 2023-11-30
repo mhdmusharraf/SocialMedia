@@ -1,1 +1,4 @@
-This is my social media project
+This is my social media project.
+
+npm i nodemon -D
+npm i express
