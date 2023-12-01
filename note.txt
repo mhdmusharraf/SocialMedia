@@ -2,3 +2,4 @@ This is my social media project.
 
 npm i nodemon -D
 npm i express
+npm i pug
