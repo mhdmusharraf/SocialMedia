@@ -4,13 +4,9 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
   const pageData = {
-    title: "Registration",
+    title: "User Login",
   };
-  res.status(200).render("register", pageData);
-});
-
-router.get("/test", (req, res) => {
-  res.send("Register Test Page");
+  res.status(200).render("login", pageData);
 });
 
 module.exports = router;

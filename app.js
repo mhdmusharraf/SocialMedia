@@ -11,7 +11,9 @@ app.use(express.static(staticUri));
 
 //Routes
 const registerRoute = require("./routes/registerRoutes");
+const loginRoute = require("./routes/loginRoutes");
 app.use("/register", registerRoute);
+app.use("/login", loginRoute);
 
 app.get(["/", "/home", "index"], (req, res) => {
   res.send("Home Page");

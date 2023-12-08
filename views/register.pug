@@ -6,4 +6,22 @@ html(lang="en")
         title #{title}
         link(rel="stylesheet", href="/css/style.css")
     body 
-        
+        .form-container 
+            h1 Join us today!
+            p Sign up now to become a member
+            .row 
+                input(type="text" required="")
+                label Name 
+            .row 
+                input(type="email" required="")
+                label Email
+            .row 
+                input(type="password" required="")
+                label Password
+            .row 
+                input(type="password" required="")
+                label Confirm Password  
+            .row 
+                button(type="submit") Sign Up 
+            p Already a Member ? 
+                a(href="/login") Login Here
