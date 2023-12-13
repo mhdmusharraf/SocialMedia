@@ -3,3 +3,6 @@ This is my social media project.
 npm i nodemon -D
 npm i express
 npm i pug
+npm i body-parser
+npm i mongoose
+npm i bcrypt

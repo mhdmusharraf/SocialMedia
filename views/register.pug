@@ -3,25 +3,31 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel='icon', type='image/ico', href='/images/logo.jpeg')
         title #{title}
         link(rel="stylesheet", href="/css/style.css")
     body 
         .form-container 
             h1 Join us today!
             p Sign up now to become a member
-            .row 
-                input(type="text" required="")
-                label Name 
-            .row 
-                input(type="email" required="")
-                label Email
-            .row 
-                input(type="password" required="")
-                label Password
-            .row 
-                input(type="password" required="")
-                label Confirm Password  
-            .row 
-                button(type="submit") Sign Up 
+            form#frm(method="POST")
+                .row 
+                    input#name(type="text" required="" name="name" value=name)
+                    label Name 
+                .row 
+                    input#email(type="email" required="" name="email" value=email)
+                    label Email
+                .row 
+                    input#username(type="text" required="" name="username" value=username)
+                    label Username
+                .row 
+                    input#password(type="password" required="" name="password")
+                    label Password
+                .row 
+                    input#confirm(type="password" required="" name="confirm")
+                    label Confirm Password  
+                .row 
+                    button(type="submit") Sign Up 
             p Already a Member ? 
                 a(href="/login") Login Here
+        script(src="/js/register.js", defer="") - defer using for after reloading whole file only this script file want to work

@@ -1,5 +1,7 @@
 const express = require("express");
 const path = require("path");
+const bodyParser = require("body-parser");
+const connectDB = require("./db/connect");
 
 const app = express();
 const port = "3000";
@@ -8,6 +10,7 @@ app.set("view engine", "pug");
 app.set("views", "views");
 const staticUri = path.join(__dirname, "public");
 app.use(express.static(staticUri));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 //Routes
 const registerRoute = require("./routes/registerRoutes");
